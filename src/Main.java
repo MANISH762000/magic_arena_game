@@ -1,3 +1,4 @@
+import application.ArenaService;
 import domain.Player;
 import domain.Arena;
 import presentation.GameUI;
@@ -7,10 +8,10 @@ import presentation.GameUI;
 public class Main {
     public static void main(String[] args) {
         GameUI gameUI = new GameUI();
-        Player player1 = gameUI.getplayerInput("A");
-        Player player2 = gameUI.getplayerInput("B");
-        Arena arena = new Arena(player1, player2);
-        arena.startMatch();
+        Player playerA = gameUI.getplayerInput("A");
+        Player playerB = gameUI.getplayerInput("B");
+        ArenaService arenaService = new ArenaService(playerA, playerB);
+        arenaService.startMatch();
 
     }
 }
