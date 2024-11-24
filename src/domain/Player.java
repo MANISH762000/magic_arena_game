@@ -27,7 +27,7 @@ public class Player {
         return name;
     }
     public void takeDamage(int damage) {
-        this.health = Math.max(0, this.health - damage);
+        health = Math.max(0, health - damage);
     }
     public boolean isAlive() {
         return health > 0;
