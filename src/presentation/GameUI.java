@@ -19,6 +19,7 @@ public class GameUI {
         int strength = scanner.nextInt();
         System.out.printf("Enter player %s attack:", playerName);
         int attack  = scanner.nextInt();
+        scanner.nextLine();
 
         return new Player(name, health, strength, attack);
     }
